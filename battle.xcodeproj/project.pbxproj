@@ -12,6 +12,7 @@
 		EB83AE8F1CF5F630003293FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB83AE8D1CF5F630003293FF /* Main.storyboard */; };
 		EB83AE911CF5F630003293FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB83AE901CF5F630003293FF /* Assets.xcassets */; };
 		EB83AE941CF5F630003293FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB83AE921CF5F630003293FF /* LaunchScreen.storyboard */; };
+		EB83AE9C1CF5FA17003293FF /* Retro Computer_DEMO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB83AE9B1CF5FA17003293FF /* Retro Computer_DEMO.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EB83AE901CF5F630003293FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EB83AE931CF5F630003293FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB83AE951CF5F630003293FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EB83AE9B1CF5FA17003293FF /* Retro Computer_DEMO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Retro Computer_DEMO.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 		EB83AE881CF5F630003293FF /* battle */ = {
 			isa = PBXGroup;
 			children = (
+				EB83AE9B1CF5FA17003293FF /* Retro Computer_DEMO.ttf */,
 				EB83AE891CF5F630003293FF /* AppDelegate.swift */,
 				EB83AE8B1CF5F630003293FF /* ViewController.swift */,
 				EB83AE8D1CF5F630003293FF /* Main.storyboard */,
@@ -124,6 +127,7 @@
 			files = (
 				EB83AE941CF5F630003293FF /* LaunchScreen.storyboard in Resources */,
 				EB83AE911CF5F630003293FF /* Assets.xcassets in Resources */,
+				EB83AE9C1CF5FA17003293FF /* Retro Computer_DEMO.ttf in Resources */,
 				EB83AE8F1CF5F630003293FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,6 +292,7 @@
 				EB83AE9A1CF5F630003293FF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
