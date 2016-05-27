@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "9E2257871F27BD64E1FBA94789B2405CE371F864",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "63A2CD7E78C6A28FD67391F522C24A767C8813F7" : 0,
+    "9E2257871F27BD64E1FBA94789B2405CE371F864" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6C07E2C9-9463-457C-A370-2F05EF1CC5A7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "63A2CD7E78C6A28FD67391F522C24A767C8813F7" : "..",
+    "9E2257871F27BD64E1FBA94789B2405CE371F864" : "battle\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "battle",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "battle.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:RunJumpStomp\/learnSwift.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "63A2CD7E78C6A28FD67391F522C24A767C8813F7"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/RunJumpStomp\/battle.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "9E2257871F27BD64E1FBA94789B2405CE371F864"
+    }
+  ]
+}

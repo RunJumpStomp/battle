@@ -13,6 +13,7 @@
 		EB83AE911CF5F630003293FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB83AE901CF5F630003293FF /* Assets.xcassets */; };
 		EB83AE941CF5F630003293FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB83AE921CF5F630003293FF /* LaunchScreen.storyboard */; };
 		EB83AE9C1CF5FA17003293FF /* Retro Computer_DEMO.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EB83AE9B1CF5FA17003293FF /* Retro Computer_DEMO.ttf */; };
+		EB83AE9E1CF60BFF003293FF /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB83AE9D1CF60BFF003293FF /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		EB83AE931CF5F630003293FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EB83AE951CF5F630003293FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB83AE9B1CF5FA17003293FF /* Retro Computer_DEMO.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Retro Computer_DEMO.ttf"; sourceTree = "<group>"; };
+		EB83AE9D1CF60BFF003293FF /* Character.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				EB83AE901CF5F630003293FF /* Assets.xcassets */,
 				EB83AE921CF5F630003293FF /* LaunchScreen.storyboard */,
 				EB83AE951CF5F630003293FF /* Info.plist */,
+				EB83AE9D1CF60BFF003293FF /* Character.swift */,
 			);
 			path = battle;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB83AE9E1CF60BFF003293FF /* Character.swift in Sources */,
 				EB83AE8C1CF5F630003293FF /* ViewController.swift in Sources */,
 				EB83AE8A1CF5F630003293FF /* AppDelegate.swift in Sources */,
 			);

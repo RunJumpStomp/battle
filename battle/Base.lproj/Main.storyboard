@@ -9,6 +9,8 @@
         <mutableArray key="Retro Computer_DEMO.ttf">
             <string>RetroComputer</string>
             <string>RetroComputer</string>
+            <string>RetroComputer</string>
+            <string>RetroComputer</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -42,7 +44,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qeA-GI-vym" userLabel="Stack View Left">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="426"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N55-BL-vcm" userLabel="player1AttackButton">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N55-BL-vcm" userLabel="player1AttackButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="78"/>
                                                 <state key="normal" image="player1attackbtn"/>
                                             </button>
@@ -54,7 +56,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zPb-vB-xpa" userLabel="Stack View Right">
                                         <rect key="frame" x="280" y="0.0" width="280" height="519"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2r-mw-zgo" userLabel="player2AttackButton">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B2r-mw-zgo" userLabel="player2AttackButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="78"/>
                                                 <state key="normal" image="player2attackbtn"/>
                                                 <connections>
@@ -92,6 +94,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loc-Me-Qtl" userLabel="Right HP ">
+                                <rect key="frame" x="446" y="559" width="72" height="30"/>
+                                <fontDescription key="fontDescription" name="RetroComputer" family="Retro Computer" pointSize="17"/>
+                                <color key="textColor" red="0.99460078529999996" green="0.99460078529999996" blue="0.99460078529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leQ-ve-sib" userLabel="Left HP">
+                                <rect key="frame" x="77" y="557" width="72" height="30"/>
+                                <fontDescription key="fontDescription" name="RetroComputer" family="Retro Computer" pointSize="17"/>
+                                <color key="textColor" red="0.99460078529999996" green="0.99460078529999996" blue="0.99460078529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -100,6 +114,7 @@
                             <constraint firstAttribute="trailing" secondItem="FMh-Xq-YnM" secondAttribute="trailing" constant="20" id="9Kw-gH-cHe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="k49-eW-MbQ" secondAttribute="trailing" constant="20" id="AEd-cg-A6L"/>
                             <constraint firstItem="sbh-ot-w3n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AXu-Vu-NAv"/>
+                            <constraint firstItem="Loc-Me-Qtl" firstAttribute="centerY" secondItem="Wbh-98-WTd" secondAttribute="centerY" id="Aiz-MV-Umu"/>
                             <constraint firstAttribute="bottomMargin" secondItem="k49-eW-MbQ" secondAttribute="bottom" constant="8" id="Fll-xm-rrW"/>
                             <constraint firstItem="FMh-Xq-YnM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="KJL-8B-K3N"/>
                             <constraint firstAttribute="trailing" secondItem="Aoe-6G-Ue0" secondAttribute="trailing" id="KX2-nE-FHb"/>
@@ -110,6 +125,9 @@
                             <constraint firstItem="FMh-Xq-YnM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bWa-sh-opx"/>
                             <constraint firstItem="l8R-pI-OKz" firstAttribute="centerY" secondItem="B2r-mw-zgo" secondAttribute="centerY" id="f4m-gK-uz6"/>
                             <constraint firstItem="Cjf-DU-5Q8" firstAttribute="centerX" secondItem="N55-BL-vcm" secondAttribute="centerX" id="hRY-h8-fOY"/>
+                            <constraint firstItem="Loc-Me-Qtl" firstAttribute="leading" secondItem="k49-eW-MbQ" secondAttribute="trailing" constant="-90" id="he6-xz-fQj"/>
+                            <constraint firstItem="Loc-Me-Qtl" firstAttribute="centerY" secondItem="leQ-ve-sib" secondAttribute="centerY" id="iQL-xx-BLy"/>
+                            <constraint firstItem="k49-eW-MbQ" firstAttribute="leading" secondItem="leQ-ve-sib" secondAttribute="trailing" constant="-90" id="iee-TP-qeS"/>
                             <constraint firstAttribute="trailing" secondItem="sbh-ot-w3n" secondAttribute="trailing" id="rkR-az-lar"/>
                             <constraint firstItem="l8R-pI-OKz" firstAttribute="centerX" secondItem="B2r-mw-zgo" secondAttribute="centerX" id="tJi-1r-mA0"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Aoe-6G-Ue0" secondAttribute="bottom" id="uin-rs-ceK"/>
@@ -121,8 +139,10 @@
                         <outlet property="character1Image" destination="PQl-sS-vwy" id="2Ke-Aw-PKF"/>
                         <outlet property="character2Image" destination="E6e-pf-e6c" id="b3w-Ut-oyf"/>
                         <outlet property="feedbackLabel" destination="Wbh-98-WTd" id="7kR-Dc-DQr"/>
+                        <outlet property="leftPlayerHP" destination="leQ-ve-sib" id="e6U-Fk-moM"/>
                         <outlet property="player1AttackButton" destination="N55-BL-vcm" id="je6-86-eVD"/>
                         <outlet property="player2AttackButton" destination="B2r-mw-zgo" id="E8H-Ch-KuZ"/>
+                        <outlet property="rightPlayerHP" destination="Loc-Me-Qtl" id="WmE-4N-9mq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
