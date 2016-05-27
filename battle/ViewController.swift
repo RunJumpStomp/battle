@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var feedbackLabel: UILabel!
     @IBOutlet weak var rightPlayerHP: UILabel!
     @IBOutlet weak var leftPlayerHP: UILabel!
+    @IBOutlet weak var playAgainButton: UIButton!
+    @IBOutlet weak var playAgainLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -41,57 +43,73 @@ class ViewController: UIViewController {
     
     //Actions
     @IBAction func onPlayer1AttackButtonTapped(sender: UIButton) {
-        attack("P2", attackPower: knight.attackPower)
+        if knight.isAttacked(orc.attackPower) {
+            feedbackLabel.text = "\(orc.name) attacked \(knight.name) for \(orc.attackPower) hp"
+            rightPlayerHP.text = String(knight.hp)
+            player2AttackButton.enabled = false
+            
+            //find a way to insert a delay here
+            delay(3.0) {
+                self.player2AttackButton.enabled = true
+            }
+            if knight.checkForDeath() {
+                character2Image.hidden = true
+                rightPlayerHP.text = "Dead"
+                feedbackLabel.text = "\(orc.name) has killed \(knight.name) in battle!"
+                playAgainLabel.hidden = false
+                playAgainButton.hidden = false
+            }
+        }
         
         
     }
     
     @IBAction func onPlayer2AttackButtonTapped(sender: UIButton) {
-    }
-    
-    func attack(target: String, attackPower: Int) {
-        //reduce the HP by the attack power
         
-        if target == "P2" {
-            reduceHp("P2", ammount: orc.attackPower)
-        }
-        
-        if target == "P1" {
-            reduceHp("P1", ammount: knight.attackPower)
-        }
-        
-        
-        //hide targets button for 3 seconds
-        //check if target is alive and announce winner if applicable
-    }
-    
-    func reduceHp (target: String, ammount: Int){
-        //reduce the HP of the target by the ammount
-        if target == "P2" {
-            knight.hp -= orc.attackPower
-            rightPlayerHP.text = String(knight.hp)
-        }
-        
-        if target == "P1" {
-            orc.hp -= knight.attackPower
+        if orc.isAttacked(knight.attackPower) {
+            feedbackLabel.text = "\(knight.name) attacked \(orc.name) for \(knight.attackPower) hp"
             leftPlayerHP.text = String(orc.hp)
+            player1AttackButton.enabled = false
+            delay(3.0) {
+                self.player1AttackButton.enabled = true
+            }
+            if orc.checkForDeath() {
+                character1Image.hidden = true
+                leftPlayerHP.text = "Dead"
+                feedbackLabel.text = "\(knight.name) has killed \(orc.name) in battle!"
+                playAgainLabel.hidden = false
+                playAgainButton.hidden = false
+            }
         }
     }
+
     
-    func hideButton(button: Int) {
-        //Hide the button of the target
+    @IBAction func onPlayAgainButtonTapped(sender: UIButton) {
+        startNewGame()
+        
+        
     }
-    
     func startNewGame() {
         //start a new game here.  remember to call this as part of viewDidLoad
-        player1AttackButton.hidden = false
-        player2AttackButton.hidden = false
         character1Image.hidden = false
         character2Image.hidden = false
         feedbackLabel.text = "Hold the Line!"
         rightPlayerHP.text = String(knight.hp)
         leftPlayerHP.text = String(orc.hp)
+        playAgainButton.hidden = true
+        playAgainLabel.hidden = true
+        player1AttackButton.enabled = true
+        player2AttackButton.enabled = true
         
+    }
+    //find someone to explain this to me!
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
     
 }

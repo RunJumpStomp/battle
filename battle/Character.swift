@@ -46,7 +46,13 @@ class Character {
         self._attackPower = attackPower
         self._name = name
     }
+    
+    func isAttacked(attackPower: Int) -> Bool {
+        self._hp -= attackPower
         
+        return true
+    }
+    
     func checkForDeath() -> Bool {
         if hp <= 0 {
             return true

@@ -11,6 +11,7 @@
             <string>RetroComputer</string>
             <string>RetroComputer</string>
             <string>RetroComputer</string>
+            <string>RetroComputer</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -47,6 +48,9 @@
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N55-BL-vcm" userLabel="player1AttackButton">
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="78"/>
                                                 <state key="normal" image="player1attackbtn"/>
+                                                <connections>
+                                                    <action selector="onPlayer1AttackButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lb1-sG-cGh"/>
+                                                </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="enemy" translatesAutoresizingMaskIntoConstraints="NO" id="PQl-sS-vwy" userLabel="character1Image">
                                                 <rect key="frame" x="0.0" y="78" width="280" height="348"/>
@@ -60,7 +64,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="280" height="78"/>
                                                 <state key="normal" image="player2attackbtn"/>
                                                 <connections>
-                                                    <action selector="player2AttackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vKn-7v-1Eu"/>
+                                                    <action selector="onPlayer2AttackButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAA-bc-BrC"/>
                                                 </connections>
                                             </button>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="player" translatesAutoresizingMaskIntoConstraints="NO" id="E6e-pf-e6c" userLabel="character2Image">
@@ -88,22 +92,36 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hold the line!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbh-98-WTd" userLabel="feebackLabel">
-                                <rect key="frame" x="172" y="563" width="256" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hold the line!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wbh-98-WTd" userLabel="feebackLabel">
+                                <rect key="frame" x="250" y="562" width="101" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loc-Me-Qtl" userLabel="Right HP ">
-                                <rect key="frame" x="446" y="559" width="72" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Loc-Me-Qtl" userLabel="Right HP ">
+                                <rect key="frame" x="470" y="562" width="72" height="22"/>
                                 <fontDescription key="fontDescription" name="RetroComputer" family="Retro Computer" pointSize="17"/>
                                 <color key="textColor" red="0.99460078529999996" green="0.99460078529999996" blue="0.99460078529999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leQ-ve-sib" userLabel="Left HP">
-                                <rect key="frame" x="77" y="557" width="72" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="leQ-ve-sib" userLabel="Left HP">
+                                <rect key="frame" x="58" y="562" width="72" height="22"/>
                                 <fontDescription key="fontDescription" name="RetroComputer" family="Retro Computer" pointSize="17"/>
                                 <color key="textColor" red="0.99460078529999996" green="0.99460078529999996" blue="0.99460078529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" tag="1" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n7d-3w-ySU" userLabel="playAgainButton">
+                                <rect key="frame" x="160" y="261" width="280" height="78"/>
+                                <state key="normal" image="player1attackbtn"/>
+                                <connections>
+                                    <action selector="onPlayAgainButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6KB-c2-1gg"/>
+                                    <action selector="onPlayer1AttackButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dom-T6-MPZ"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Play Again" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eae-p9-FnE" userLabel="playAgainLabel">
+                                <rect key="frame" x="241" y="285" width="117" height="30"/>
+                                <fontDescription key="fontDescription" name="RetroComputer" family="Retro Computer" pointSize="19"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -115,7 +133,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="k49-eW-MbQ" secondAttribute="trailing" constant="20" id="AEd-cg-A6L"/>
                             <constraint firstItem="sbh-ot-w3n" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AXu-Vu-NAv"/>
                             <constraint firstItem="Loc-Me-Qtl" firstAttribute="centerY" secondItem="Wbh-98-WTd" secondAttribute="centerY" id="Aiz-MV-Umu"/>
+                            <constraint firstItem="eae-p9-FnE" firstAttribute="centerX" secondItem="n7d-3w-ySU" secondAttribute="centerX" id="Fcd-dL-otG"/>
                             <constraint firstAttribute="bottomMargin" secondItem="k49-eW-MbQ" secondAttribute="bottom" constant="8" id="Fll-xm-rrW"/>
+                            <constraint firstItem="eae-p9-FnE" firstAttribute="centerY" secondItem="n7d-3w-ySU" secondAttribute="centerY" id="IYN-4V-m6r"/>
+                            <constraint firstItem="n7d-3w-ySU" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JVS-ZE-Fz9"/>
                             <constraint firstItem="FMh-Xq-YnM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="8" id="KJL-8B-K3N"/>
                             <constraint firstAttribute="trailing" secondItem="Aoe-6G-Ue0" secondAttribute="trailing" id="KX2-nE-FHb"/>
                             <constraint firstItem="Wbh-98-WTd" firstAttribute="centerX" secondItem="k49-eW-MbQ" secondAttribute="centerX" id="T86-YG-bHs"/>
@@ -124,6 +145,7 @@
                             <constraint firstItem="Aoe-6G-Ue0" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="af6-mx-ZzX"/>
                             <constraint firstItem="FMh-Xq-YnM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="bWa-sh-opx"/>
                             <constraint firstItem="l8R-pI-OKz" firstAttribute="centerY" secondItem="B2r-mw-zgo" secondAttribute="centerY" id="f4m-gK-uz6"/>
+                            <constraint firstItem="n7d-3w-ySU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gSF-VT-JKV"/>
                             <constraint firstItem="Cjf-DU-5Q8" firstAttribute="centerX" secondItem="N55-BL-vcm" secondAttribute="centerX" id="hRY-h8-fOY"/>
                             <constraint firstItem="Loc-Me-Qtl" firstAttribute="leading" secondItem="k49-eW-MbQ" secondAttribute="trailing" constant="-90" id="he6-xz-fQj"/>
                             <constraint firstItem="Loc-Me-Qtl" firstAttribute="centerY" secondItem="leQ-ve-sib" secondAttribute="centerY" id="iQL-xx-BLy"/>
@@ -140,8 +162,10 @@
                         <outlet property="character2Image" destination="E6e-pf-e6c" id="b3w-Ut-oyf"/>
                         <outlet property="feedbackLabel" destination="Wbh-98-WTd" id="7kR-Dc-DQr"/>
                         <outlet property="leftPlayerHP" destination="leQ-ve-sib" id="e6U-Fk-moM"/>
+                        <outlet property="playAgainButton" destination="n7d-3w-ySU" id="SwF-np-GLR"/>
+                        <outlet property="playAgainLabel" destination="eae-p9-FnE" id="yxO-BC-vMt"/>
                         <outlet property="player1AttackButton" destination="N55-BL-vcm" id="je6-86-eVD"/>
-                        <outlet property="player2AttackButton" destination="B2r-mw-zgo" id="E8H-Ch-KuZ"/>
+                        <outlet property="player2AttackButton" destination="B2r-mw-zgo" id="Kqx-o3-158"/>
                         <outlet property="rightPlayerHP" destination="Loc-Me-Qtl" id="WmE-4N-9mq"/>
                     </connections>
                 </viewController>
